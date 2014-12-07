@@ -1,0 +1,23 @@
+{
+  "name": "Meganicenavn",
+  "version": "0.1.0",
+  "authors": [
+    "Jonas Dybboe Wideking <jonas@jonaswideking.dk>",
+    "Jesper Hellner Sørensen <jesper@designbyjesper.dk>"
+  ],
+  "description": "Meganicenavn bureau project",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "angular": "~1.3.5",
+    "normalize.css": "~3.0.2",
+    "angular-ui-router": "~0.2.13",
+    "angular-route": "~1.3.6",
+    "angular-animate": "~1.3.6"
+  }
+}

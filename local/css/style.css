@@ -1,0 +1,60 @@
+* {
+  margin-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0; }
+
+body {
+  font-family: "Lato", sans-serif; }
+
+header {
+  width: 50%;
+  float: right;
+  height: 100vh;
+  text-align: center; }
+
+ul {
+  width: 100%;
+  padding: 0; }
+
+li {
+  list-style: none;
+  height: 25vh;
+  line-height: 25vh;
+  width: 100%;
+  background-color: #005499; }
+  li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    font-weight: 100;
+    font-size: 2em; }
+
+li:first-child {
+  background-color: #004680; }
+
+main {
+  width: 50%;
+  float: left;
+  background-color: #fafafa;
+  height: 100vh; }
+
+.logo {
+  width: 50%;
+  margin: 40px auto; }
+
+.logo img {
+  width: 100%; }
+
+/* MEDIA screen max 1024px____________________________________________________*/
+/* MEDIA screen max 768px_____________________________________________________*/
+@media only screen and (max-width: 768px) {
+  header {
+    width: 100%; }
+
+  main {
+    width: 100%; } }
+/* MEDIA screen max 480px_____________________________________________________*/
+/* MEDIA screen max 320px_____________________________________________________*/
+
+/*# sourceMappingURL=style.css.map */

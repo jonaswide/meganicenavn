@@ -1,0 +1,22 @@
+{
+    "name" : "Meganicenavn",
+    "version" : "0.1.0",
+    "authors": [
+        "Jonas Dybboe Wideking <jonas@jonaswideking.dk>",
+        "Jesper Hellner Sørensen <jesper@designbyjesper.dk>"
+    ],
+    "private" : true,
+
+    "devDependencies" : {
+        "grunt" :                       "~0.4.0",
+        "grunt-contrib-cssmin":         "*",
+        "grunt-contrib-sass":           "*",
+        "grunt-contrib-uglify":         "*",
+        "grunt-contrib-watch":          "*",
+        "grunt-express":                "*",
+        "grunt-open":                   "*",
+        "grunt-cssc":                   "*",
+        "grunt-htmlhint":               "*",
+        "matchdep":                     "*"
+    }
+}
