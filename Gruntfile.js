@@ -34,17 +34,6 @@ module.exports = function(grunt) {
       }
     },
 
-    express:{
-      all:{
-        options:{
-          port: 9000,
-          hostname: 'localhost',
-          bases: ['public'],
-          livereload: true
-        }
-      }
-    },
-
     watch: {
       options:{
         livereload: true
@@ -63,9 +52,32 @@ module.exports = function(grunt) {
       }
     },
 
+/*    express:{
+      server:{
+        options:{
+          port: 9000,
+          hostname: 'localhost',
+          bases: ['public'],
+          livereload: true
+        }
+      }
+    },*/
+    express: {
+      options: {
+        port: 9000,
+        hostname: 'localhost'
+      },
+      livereload: {
+        options: {
+          livereload: true,
+          bases: ['public']
+        }
+      }
+    },
+
     open: {
       all: {
-        path: 'http://localhost:<%= express.all.options.port %>'
+        path: 'http://localhost:<%= express.options.port %>'
       }
     }
   });
