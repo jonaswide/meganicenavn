@@ -7,7 +7,8 @@ module.exports = function(grunt) {
     
     uglify: {
       options: {
-        banner: '/*Developed by <%= pkg.name %> on <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+        banner: '/*Developed by <%= pkg.name %> on <%= grunt.template.today("dd-mm-yyyy") %> */\n',
+        mangle: false
       },
       jsTask: {
         src: 'local/js/*.js',
@@ -39,7 +40,7 @@ module.exports = function(grunt) {
         livereload: true
       },
       set1: {
-        files: ['local/js/app.js'],
+        files: ['local/js/*.js'],
         tasks: ['uglify']
       },
       set2: {
@@ -85,6 +86,7 @@ module.exports = function(grunt) {
 grunt.loadNpmTasks('grunt-contrib-sass');  
 grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-contrib-uglify');
+grunt.loadNpmTasks('grunt-ngmin');
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-express');
 grunt.loadNpmTasks('grunt-open');
