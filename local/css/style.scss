@@ -75,43 +75,45 @@ main{
 }
 
 [ui-view].ng-enter, [ui-view].ng-leave {
-  position: absolute;
-  left: 0;
-  right: 0;
-  -webkit-transition:all .5s ease-in-out;
-    -moz-transition:all .5s ease-in-out;
-    -o-transition:all .5s ease-in-out;
-    transition:all .5s ease-in-out;
+ 
 }
 
 [ui-view].ng-enter {
-  opacity: 0;
-  -webkit-transform:translate3d(0.5, 0.5, 0.5);
-  -moz-transform:translate3d(0.5, 0.5, 0.5);
-  transform:translate3d(0.5, 0.5, 0.5);
+	position: absolute;
+ -webkit-animation: enter_sequence 0.5s linear; /* Safari/Chrome */
+  animation: enter_sequence 0.5s linear; /* IE10+ and Future Browsers */
 }
 
 [ui-view].ng-enter-active {
-  opacity: 1;
-  -webkit-transform:translate3d(0.5, 0.5, 0.5);
-  -moz-transform:translate3d(0.5, 0.5, 0.5);
-  transform:translate3d(0.5, 0.5, 0.5);
+  
 }
 
 [ui-view].ng-leave {
-  opacity: 1; 
-  -webkit-transform:translate3d(0, 0, 0);
-  -moz-transform:translate3d(0, 0, 0);
-  transform:translate3d(0, 0, 0);
+	position: absolute;
+ -webkit-animation: leave_sequence 0.5s linear; /* Safari/Chrome */
+  animation: leave_sequence 0.5s linear; /* IE10+ and Future Browsers */
 }
 
 [ui-view].ng-leave-active {
-  opacity: 0;
-  -webkit-transform:translate3d(100px, 0, 0);
-  -moz-transform:translate3d(100px, 0, 0);
-  transform:translate3d(100px, 0, 0);
+ 
 }
 
+@-webkit-keyframes enter_sequence {
+  from { left: 1000px; }
+  to { left:0; }
+}
+@keyframes enter_sequence {
+  from { left: 1000px; }
+  to { left:0; }
+}
+@-webkit-keyframes leave_sequence {
+  from { left: 0; }
+  to { left: -1000px; }
+}
+@keyframes leave_sequence {
+  from { left: 0; }
+  to { left: -1000px; }
+}
 
 /* MEDIA screen max 1024px____________________________________________________*/
 @media only screen and (max-width: 1024px) {
