@@ -42,3 +42,23 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise("/");
 });
+app.controller('navCtrl', ['$scope', function($scope){
+
+$scope.checkToggle = 1;
+
+$scope.setToggle = function(){ 
+  if ($scope.checkToggle == 1){
+    $scope.toggleClass = "toggle-left";
+    $scope.checkToggle = 2;
+  } else {
+    $scope.toggleClass = "toggle-right";
+    $scope.checkToggle = 1;
+  }
+};
+
+$scope.setToggleRight = function(){ 
+    $scope.toggleClass = "toggle-right";
+    $scope.checkToggle = 1;
+};
+}]);
+

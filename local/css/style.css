@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin-left: 0;
   margin-top: 0;
@@ -15,7 +16,8 @@ body {
 .half-screen-left {
   float: left;
   width: 50%;
-  height: 100vh; }
+  height: 100vh;
+  background-color: #fafafa; }
 
 header {
   width: 100%;
@@ -59,19 +61,25 @@ main {
 .ui-view-container {
   position: relative; }
 
-[ui-view].ng-enter {
+.toggle-left[ng-class="toggleClass"].ng-enter {
   position: absolute;
-  -webkit-animation: enter_sequence 0.5s linear;
+  -webkit-animation: enter_sequence 0.3s linear;
   /* Safari/Chrome */
-  animation: enter_sequence 0.5s linear;
+  animation: enter_sequence 0.3s linear;
   /* IE10+ and Future Browsers */ }
 
-[ui-view].ng-leave {
+.toggle-left[ng-class="toggleClass"].ng-enter-active {
+  opacity: 1; }
+
+.toggle-left[ng-class="toggleClass"].ng-leave {
   position: absolute;
-  -webkit-animation: leave_sequence 0.5s linear;
+  -webkit-animation: leave_sequence 0.3s linear;
   /* Safari/Chrome */
-  animation: leave_sequence 0.5s linear;
+  animation: leave_sequence 0.3s linear;
   /* IE10+ and Future Browsers */ }
+
+.toggle-left[ng-class="toggleClass"].ng-leave-active {
+  opacity: 1; }
 
 @-webkit-keyframes enter_sequence {
   from {
@@ -93,6 +101,47 @@ main {
     left: 0; }
   to {
     left: -1000px; } }
+/* left to right - når man er inde i subviews, skal den slide ind fra venstre til højre */
+.toggle-right[ng-class="toggleClass"].ng-enter {
+  position: absolute;
+  -webkit-animation: left_enter_sequence 0.3s linear;
+  /* Safari/Chrome */
+  animation: left_enter_sequence 0.3s linear;
+  /* IE10+ and Future Browsers */ }
+
+.toggle-right[ng-class="toggleClass"].ng-enter-active {
+  opacity: 1; }
+
+.toggle-right[ng-class="toggleClass"].ng-leave {
+  position: absolute;
+  -webkit-animation: left_leave_sequence 0.3s linear;
+  /* Safari/Chrome */
+  animation: left_leave_sequence 0.3s linear;
+  /* IE10+ and Future Browsers */ }
+
+.toggle-right[ng-class="toggleClass"].ng-leave-active {
+  opacity: 1; }
+
+@-webkit-keyframes left_enter_sequence {
+  from {
+    left: -1000px; }
+  to {
+    left: 0; } }
+@keyframes left_enter_sequence {
+  from {
+    left: -1000px; }
+  to {
+    left: 0; } }
+@-webkit-keyframes left_leave_sequence {
+  from {
+    left: 0; }
+  to {
+    left: 1000px; } }
+@keyframes left_leave_sequence {
+  from {
+    left: 0; }
+  to {
+    left: 1000px; } }
 /* MEDIA screen max 1024px____________________________________________________*/
 /* MEDIA screen max 768px_____________________________________________________*/
 @media only screen and (max-width: 768px) {

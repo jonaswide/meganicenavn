@@ -18,11 +18,13 @@ body{
 	float: right;
 	width: $half;
 	height: 100vh;
+
 }
 .half-screen-left{
 	float: left;
 	width: $half;
 	height: 100vh;
+	background-color: $offwhite;
 }
 header{
 	width: 100%;
@@ -74,30 +76,26 @@ main{
   position: relative;
 }
 
-[ui-view].ng-enter, [ui-view].ng-leave {
- 
-}
-
-[ui-view].ng-enter {
+.toggle-left[ng-class="toggleClass"].ng-enter {
 	position: absolute;
- -webkit-animation: enter_sequence 0.5s linear; /* Safari/Chrome */
-  animation: enter_sequence 0.5s linear; /* IE10+ and Future Browsers */
+	-webkit-animation: enter_sequence 0.3s linear; /* Safari/Chrome */
+	animation: enter_sequence 0.3s linear; /* IE10+ and Future Browsers */
+	
+}
+.toggle-left[ng-class="toggleClass"].ng-enter-active {
+	opacity: 1; 
+}
+.toggle-left[ng-class="toggleClass"].ng-leave {
+	position: absolute;
+	-webkit-animation: leave_sequence 0.3s linear; /* Safari/Chrome */
+	animation: leave_sequence 0.3s linear; /* IE10+ and Future Browsers */
 }
 
-[ui-view].ng-enter-active {
+.toggle-left[ng-class="toggleClass"].ng-leave-active{
+	opacity: 1;
   
 }
-
-[ui-view].ng-leave {
-	position: absolute;
- -webkit-animation: leave_sequence 0.5s linear; /* Safari/Chrome */
-  animation: leave_sequence 0.5s linear; /* IE10+ and Future Browsers */
-}
-
-[ui-view].ng-leave-active {
- 
-}
-
+//right to left
 @-webkit-keyframes enter_sequence {
   from { left: 1000px; }
   to { left:0; }
@@ -114,6 +112,43 @@ main{
   from { left: 0; }
   to { left: -1000px; }
 }
+
+/* left to right - når man er inde i subviews, skal den slide ind fra venstre til højre */
+.toggle-right[ng-class="toggleClass"].ng-enter {
+	position: absolute;
+	-webkit-animation: left_enter_sequence 0.3s linear; /* Safari/Chrome */
+	animation: left_enter_sequence 0.3s linear; /* IE10+ and Future Browsers */
+	
+}
+.toggle-right[ng-class="toggleClass"].ng-enter-active {
+	opacity: 1; 
+}
+.toggle-right[ng-class="toggleClass"].ng-leave {
+	position: absolute;
+	-webkit-animation: left_leave_sequence 0.3s linear; /* Safari/Chrome */
+	animation: left_leave_sequence 0.3s linear; /* IE10+ and Future Browsers */
+}
+.toggle-right[ng-class="toggleClass"].ng-leave-active{
+	opacity: 1;
+}
+
+@-webkit-keyframes left_enter_sequence {
+  from { left: -1000px; }
+  to { left:0; }
+}
+@keyframes left_enter_sequence {
+  from { left: -1000px; }
+  to { left:0; }
+}
+@-webkit-keyframes left_leave_sequence {
+  from { left: 0; }
+  to { left: 1000px; }
+}
+@keyframes left_leave_sequence {
+  from { left: 0; }
+  to { left: 1000px; }
+}
+
 
 /* MEDIA screen max 1024px____________________________________________________*/
 @media only screen and (max-width: 1024px) {

@@ -10,16 +10,16 @@
 	<title>Meganicenavn</title>
 </head>
 <body ng-app="app">
+ 
+	<div ng-controller="navCtrl">
+		<div class="ui-view-container">
+		<div class="half-screen-right" ui-view="viewB" ng-class="toggleClass"></div>
+		</div>
 
-<div>
-	<div class="ui-view-container">
-	<div class="half-screen-right" ui-view="viewB"></div>
+		<div class="ui-view-container">
+		<div class="half-screen-left" ui-view="viewA" ng-class="toggleClass"></div>
+		</div>
 	</div>
-
-	<div class="ui-view-container">
-	<div class="half-screen-left" ui-view="viewA"></div>
-	</div>
-</div>
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>	
 <script src="bower_components/angular/angular.min.js"></script>
