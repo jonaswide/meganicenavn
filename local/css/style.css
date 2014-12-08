@@ -25,24 +25,22 @@ header {
   text-align: center;
   background-color: #005499; }
 
-ul {
+.frontpage-header ul {
   width: 100%;
   padding: 0; }
-
-li {
+.frontpage-header li {
   list-style: none;
   height: 25vh;
   line-height: 25vh;
   width: 100%;
   background-color: #005499; }
-  li a {
+  .frontpage-header li a {
     text-decoration: none;
     color: #fff;
     display: block;
     font-weight: 100;
     font-size: 2em; }
-
-li:first-child {
+.frontpage-header li:first-child {
   background-color: #004680; }
 
 main {
@@ -101,7 +99,7 @@ main {
     left: 0; }
   to {
     left: -1000px; } }
-/* left to right - når man er inde i subviews, skal den slide ind fra venstre til højre */
+/* left to right - n├Ñr man er inde i subviews, skal den slide ind fra venstre til h├©jre */
 .toggle-right[ng-class="toggleClass"].ng-enter {
   position: absolute;
   -webkit-animation: left_enter_sequence 0.3s linear;

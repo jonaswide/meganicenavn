@@ -32,30 +32,39 @@ header{
 	text-align: center;
 	background-color: $blue;
 } 
-ul{
-	width: 100%;
-	padding: 0;
-}
-li{
-	list-style:none;
-	height: 25vh;
-	line-height: 25vh;
-	width: 100%;
-	background-color: $blue;
-	a{
-		text-decoration: none;
-		color: $link-color;
-		display: block;
-		font: {
-			weight: 100;
-			size: 2em;
+.frontpage-header{
+	ul{
+		width: 100%;
+		padding: 0;
+	}
+	li{
+		list-style:none;
+		height: 25vh;
+		line-height: 25vh;
+		width: 100%;
+		background-color: $blue;
+		a{
+			text-decoration: none;
+			color: $link-color;
+			display: block;
+			font: {
+				weight: 100;
+				size: 2em;
+			}
 		}
 	}
+
+	li:first-child{
+		background-color: darken($blue, 5%);
+		
+	}
 }
-li:first-child{
-	background-color: darken($blue, 5%);
+
+.nav-item1{
 	
 }
+
+
 
 main{
 	width: 100%;
