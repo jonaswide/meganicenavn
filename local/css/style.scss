@@ -87,8 +87,9 @@ main{
 
 .toggle-left[ng-class="toggleClass"].ng-enter {
 	position: absolute;
-	-webkit-animation: enter_sequence 0.3s linear; /* Safari/Chrome */
-	animation: enter_sequence 0.3s linear; /* IE10+ and Future Browsers */
+	left: 1000px;
+	 transform: translate3d(0px, 0px, 0px);
+	 transition: transform .2s linear;
 	
 }
 .toggle-left[ng-class="toggleClass"].ng-enter-active {
@@ -96,37 +97,21 @@ main{
 }
 .toggle-left[ng-class="toggleClass"].ng-leave {
 	position: absolute;
-	-webkit-animation: leave_sequence 0.3s linear; /* Safari/Chrome */
-	animation: leave_sequence 0.3s linear; /* IE10+ and Future Browsers */
+	left: 0px;
+	 transform: translate3d(-1000px, 0px, 0px);
+	 transition: transform .2s linear;
 }
 
 .toggle-left[ng-class="toggleClass"].ng-leave-active{
 	opacity: 1;
   
 }
-//right to left
-@-webkit-keyframes enter_sequence {
-  from { left: 1000px; }
-  to { left:0; }
-}
-@keyframes enter_sequence {
-  from { left: 1000px; }
-  to { left:0; }
-}
-@-webkit-keyframes leave_sequence {
-  from { left: 0; }
-  to { left: -1000px; }
-}
-@keyframes leave_sequence {
-  from { left: 0; }
-  to { left: -1000px; }
-}
-
 /* left to right - når man er inde i subviews, skal den slide ind fra venstre til højre */
 .toggle-right[ng-class="toggleClass"].ng-enter {
 	position: absolute;
-	-webkit-animation: left_enter_sequence 0.3s linear; /* Safari/Chrome */
-	animation: left_enter_sequence 0.3s linear; /* IE10+ and Future Browsers */
+	left: -1000px;
+	 transform: translate3d(0px, 0px, 0px);
+	 transition: transform .2s linear;
 	
 }
 .toggle-right[ng-class="toggleClass"].ng-enter-active {
@@ -134,28 +119,12 @@ main{
 }
 .toggle-right[ng-class="toggleClass"].ng-leave {
 	position: absolute;
-	-webkit-animation: left_leave_sequence 0.3s linear; /* Safari/Chrome */
-	animation: left_leave_sequence 0.3s linear; /* IE10+ and Future Browsers */
+	left: 0px;
+	 transform: translate3d(1000px, 0px, 0px);
+	 transition: transform .2s linear;
 }
 .toggle-right[ng-class="toggleClass"].ng-leave-active{
 	opacity: 1;
-}
-
-@-webkit-keyframes left_enter_sequence {
-  from { left: -1000px; }
-  to { left:0; }
-}
-@keyframes left_enter_sequence {
-  from { left: -1000px; }
-  to { left:0; }
-}
-@-webkit-keyframes left_leave_sequence {
-  from { left: 0; }
-  to { left: 1000px; }
-}
-@keyframes left_leave_sequence {
-  from { left: 0; }
-  to { left: 1000px; }
 }
 
 
