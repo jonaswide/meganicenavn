@@ -59,51 +59,88 @@ main {
 .ui-view-container {
   position: relative; }
 
-.toggle-left[ng-class="toggleClass"].ng-enter {
+.toggle-left[ui-view].ng-enter,
+.toggle-left[ui-view].ng-enter-active,
+.toggle-left[ui-view].ng-leave,
+.toggle-left[ui-view].ng-active,
+.toggle-right[ui-view].ng-enter,
+.toggle-right[ui-view].ng-enter-active,
+.toggle-right[ui-view].ng-leave,
+.toggle-right[ui-view].ng-active {
+  opacity: 1;
   position: absolute;
-  left: 1000px;
-  transform: translate3d(0px, 0px, 0px);
-  transition: transform .2s linear; }
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease; }
 
-.toggle-left[ng-class="toggleClass"].ng-enter-active {
-  opacity: 1; }
+.toggle-left[ui-view="viewA"].ng-enter {
+  opacity: 1;
+  left: 100%; }
 
-.toggle-left[ng-class="toggleClass"].ng-leave {
-  position: absolute;
-  left: 0px;
-  transform: translate3d(-1000px, 0px, 0px);
-  transition: transform .2s linear; }
+.toggle-left[ui-view="viewB"].ng-enter {
+  opacity: 1;
+  left: 150%; }
 
-.toggle-left[ng-class="toggleClass"].ng-leave-active {
-  opacity: 1; }
+.toggle-left[ui-view="viewA"].ng-enter-active {
+  opacity: 1;
+  left: 0%; }
 
-/* left to right - n├Ñr man er inde i subviews, skal den slide ind fra venstre til h├©jre */
-.toggle-right[ng-class="toggleClass"].ng-enter {
-  position: absolute;
-  left: -1000px;
-  transform: translate3d(0px, 0px, 0px);
-  transition: transform .2s linear; }
+.toggle-left[ui-view="viewB"].ng-enter-active {
+  opacity: 1;
+  left: 50%; }
 
-.toggle-right[ng-class="toggleClass"].ng-enter-active {
-  opacity: 1; }
+.toggle-left[ui-view="viewA"].ng-leave {
+  opacity: 1;
+  left: 0%; }
 
-.toggle-right[ng-class="toggleClass"].ng-leave {
-  position: absolute;
-  left: 0px;
-  transform: translate3d(1000px, 0px, 0px);
-  transition: transform .2s linear; }
+.toggle-left[ui-view="viewA"].ng-leave-active {
+  opacity: 1;
+  left: -100%; }
 
-.toggle-right[ng-class="toggleClass"].ng-leave-active {
-  opacity: 1; }
+.toggle-left[ui-view="viewB"].ng-leave {
+  opacity: 1;
+  left: 50%; }
+
+.toggle-left[ui-view="viewB"].ng-leave-active {
+  opacity: 1;
+  left: -50%; }
+
+/*slide fra venstre til højre */
+.toggle-right[ui-view="viewA"].ng-enter {
+  opacity: 1;
+  left: -100%; }
+
+.toggle-right[ui-view="viewB"].ng-enter {
+  opacity: 1;
+  left: -50%; }
+
+.toggle-right[ui-view="viewA"].ng-enter-active {
+  opacity: 1;
+  left: 0%; }
+
+.toggle-right[ui-view="viewB"].ng-enter-active {
+  opacity: 1;
+  left: 50%; }
+
+.toggle-right[ui-view="viewA"].ng-leave {
+  opacity: 1;
+  left: 0%; }
+
+.toggle-right[ui-view="viewA"].ng-leave-active {
+  opacity: 1;
+  left: 100%; }
+
+.toggle-right[ui-view="viewB"].ng-leave {
+  opacity: 1;
+  left: 50%; }
+
+.toggle-right[ui-view="viewB"].ng-leave-active {
+  opacity: 1;
+  left: 150%; }
 
 /* MEDIA screen max 1024px____________________________________________________*/
 /* MEDIA screen max 768px_____________________________________________________*/
-@media only screen and (max-width: 768px) {
-  header {
-    width: 100%; }
-
-  main {
-    width: 100%; } }
 /* MEDIA screen max 480px_____________________________________________________*/
 /* MEDIA screen max 320px_____________________________________________________*/
 

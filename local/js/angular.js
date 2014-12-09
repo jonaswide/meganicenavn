@@ -58,7 +58,7 @@ $scope.setToggle = function(){
 
 $scope.setToggleRight = function(){ 
     $scope.toggleClass = "toggle-right";
-    $scope.checkToggle = 1;
+    $scope.checkToggle = 1;  
 };
 }]);
 
