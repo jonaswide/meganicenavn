@@ -24,6 +24,26 @@ header {
   height: 100vh;
   text-align: center;
   background-color: #005499; }
+  header h1 {
+    color: #fff;
+    height: 70vh;
+    line-height: 70vh;
+    font-weight: 100;
+    font-size: 4em; }
+  header .backlink {
+    line-height: 10vh;
+    height: 10vh;
+    display: block; }
+  header .stripemenu {
+    width: 50px;
+    margin: 0 50%;
+    float: left; }
+    header .stripemenu .stripe {
+      width: 100%;
+      height: 5px;
+      background-color: #fff;
+      float: left;
+      margin-top: 10px; }
 
 .frontpage-header ul {
   width: 100%;
@@ -69,10 +89,10 @@ main {
 .toggle-right[ui-view].ng-active {
   opacity: 1;
   position: absolute;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease; }
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s  ease;
+  -o-transition: all 0.7s  ease;
+  transition: all 0.7s  ease; }
 
 .toggle-left[ui-view="viewA"].ng-enter {
   opacity: 1;

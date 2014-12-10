@@ -1,9 +1,11 @@
 $font-stack: 'Lato', sans-serif;
 $primary-color: #ccc;
 $half: 50%;
+$white: #fff;
 $link-color: #fff;
 $blue: #005499;
 $offwhite: #fafafa;
+
 
 *{
 	margin-left: 0;
@@ -27,10 +29,36 @@ body{
 	background-color: $offwhite;
 }
 header{
-	width: 100%;
+	width: 100%; 
 	height: 100vh;
 	text-align: center;
 	background-color: $blue;
+		h1{
+			color: $white;
+			height: 70vh;
+			line-height: 70vh;
+			font: {
+					weight: 100;
+					size: 4em;
+			}
+		}
+		.backlink{
+			line-height: 10vh;
+			height: 10vh;
+			display: block;
+		}
+	.stripemenu{
+		width: 50px;
+		margin: 0 50%;
+		float: left;
+		.stripe{
+			width: 100%;
+			height: 5px;
+			background-color: $white;
+			float: left;
+			margin-top: 10px;
+		}
+	}
 } 
 .frontpage-header{
 	ul{
@@ -89,10 +117,10 @@ main{
 .toggle-right[ui-view].ng-active{
 	opacity: 1;
 	 position: absolute;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s  ease;
+    -o-transition: all 0.7s  ease;
+    transition: all 0.7s  ease; 
 }
 .toggle-left[ui-view="viewA"].ng-enter{
 	opacity: 1;
