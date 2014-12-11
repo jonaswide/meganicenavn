@@ -16,6 +16,19 @@ $offwhite: #fafafa;
 body{
 	font-family: $font-stack;
 }
+p{
+	line-height: 1.45;
+	font: {
+		weight: 100;
+		size: 18px;
+	}
+}
+.responsive-image{
+	width: 100%;
+	height: 100%;
+	float: left;
+	margin-bottom: 0;
+}
 .half-screen-right{
 	float: right;
 	width: $half;
@@ -35,31 +48,40 @@ header{
 	background-color: $blue;
 		h1{
 			color: $white;
-			height: 70vh;
-			line-height: 70vh;
+			height: 60vh;
+			line-height: 60vh;
 			font: {
 					weight: 100;
 					size: 4em;
 			}
 		}
-		.backlink{
-			line-height: 10vh;
-			height: 10vh;
-			display: block;
-		}
-	.stripemenu{
-		width: 50px;
-		margin: 0 50%;
-		float: left;
-		.stripe{
+		.back{
 			width: 100%;
-			height: 5px;
-			background-color: $white;
 			float: left;
-			margin-top: 10px;
-		}
+			.backlink{
+				line-height: 20vh;
+				height: 20vh;
+				float: left;
+			
+			}
+			.stripemenu{
+				display: block;
+				width: 45px;
+				margin-left: 20px;
+				margin-top: 10px;
+				float: left;
+				.stripe{
+					width: 100%;
+					height: 1px;
+					background-color: $white;
+					float: left;
+					margin-top: 10px;
+					float: left;
+				}
+			}
 	}
 } 
+
 .frontpage-header{
 	ul{
 		width: 100%;
@@ -188,6 +210,71 @@ main{
 .toggle-right[ui-view="viewB"].ng-leave-active {
 	opacity: 1;
     left: 150%;
+}
+
+main{
+	width: 100%;
+}
+section{
+	width: 100%;
+	height: 50vh;
+	float:left;
+	background-color: lighten($blue, 20%);
+		p{
+			color: $white;
+			padding: 5%;
+		}
+}
+section:last-child{
+	background-color: lighten($blue, 10%);
+	position: relative;
+
+	
+}
+.img-container{
+	width: 100%;
+	float: left;
+	overflow: hidden;
+	height: 50vh;
+}
+.arrow-left{
+	color: $white;
+	font-size: 4em;
+	line-height: 1em;
+	font-weight: 100;
+	padding: 5px;
+	border: 1px solid $white;
+	width: 70px;
+	float: left;
+	text-align: center;
+	border-radius: 5px;
+	position: absolute;
+	top: -40px;
+	left: 10px;
+	transition: all 0.2s ease;
+
+}
+.arrow-right{
+	color: $white;
+	font-size: 4em;
+	line-height: 1em;
+	font-weight: 100;
+	padding: 5px;
+	border: 1px solid $white;
+	width: 70px;
+	float: left;
+	text-align: center;
+	border-radius: 5px;
+	position: absolute;
+	top: -40px;
+	right: 10px;
+ 	transition: all 0.2s ease;
+
+}
+.arrow-left:hover, .arrow-right:hover{
+	background-color: #999;
+	cursor:pointer;
+
 }
 
 /* MEDIA screen max 1024px____________________________________________________*/
