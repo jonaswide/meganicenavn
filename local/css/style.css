@@ -6,7 +6,9 @@
   margin-bottom: 0; }
 
 body {
-  font-family: "Lato", sans-serif; }
+  font-family: "Lato", sans-serif;
+  overflow-y: scroll;
+  overflow-x: hidden; }
 
 .half-screen-right {
   float: right;
@@ -126,7 +128,7 @@ main {
   opacity: 1;
   left: -50%; }
 
-/*slide fra venstre til højre */
+/*slide fra venstre til h├©jre */
 .toggle-right[ui-view="viewA"].ng-enter {
   opacity: 1;
   left: -100%; }

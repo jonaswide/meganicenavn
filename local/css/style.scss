@@ -15,6 +15,8 @@ $offwhite: #fafafa;
 }
 body{
 	font-family: $font-stack;
+	overflow-y: scroll;
+overflow-x: hidden;
 }
 .half-screen-right{
 	float: right;
